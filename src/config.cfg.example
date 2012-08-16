@@ -1,0 +1,37 @@
+#===================================================================================
+#
+#	  FILE: config.cfg
+#
+#	 USAGE: copy to /etc/gsm/config.cfg and adjust to your liking
+#
+#  DESCRIPTION: check git repository from config file /etc/gsm/config.cfg
+#		for changed definitions and update gameservers accordingly
+#
+#      OPTIONS: ---
+# REQUIREMENTS: ---
+#	  BUGS: ---
+#	 NOTES: ---
+#	AUTHOR: Phillip "ZyanKLee" Scholz
+#      VERSION: 0.1
+#      CREATED: 16.08.2012 - 18:39
+#     REVISION: ---
+#
+#===================================================================================
+
+
+#-----------------------------------------------------------------------------------
+# set repository to the url where the cronjob can find
+# your git repository with gameserver definitions.
+# If your provide it with a ssh key you can even use
+# private repositories.
+#-----------------------------------------------------------------------------------
+
+repository="https://github.com/yourname/yourrepository.git"
+
+
+
+#-----------------------------------------------------------------------------------
+#
+#
+#
+#-----------------------------------------------------------------------------------
