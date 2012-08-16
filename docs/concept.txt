@@ -1,0 +1,25 @@
+
+git/servers.list:
+	one servername per line
+	temporary disabling with commenting name out
+	comments are done by hashtag:
+	# castle_green
+
+git/<servername>:
+	each server gets a subdir with its configuration
+	i.e. for urbanterror it is "server.cfg"
+	additional stuff that needs to go in the config
+	dir of the dedicated server will be placed here
+	as well.
+
+git/<servername>/server.cfg:
+	may contain substitution marks in the style of
+	%%VARIABLE%%
+	all substition values will be read from rpl.list
+
+git/<servername>/rpl.list:
+	contains substition marks and values in the style of
+	VARIABLE=value
+	the variable name HAS to be uppercase, the value can
+	be encased in " or '
+
