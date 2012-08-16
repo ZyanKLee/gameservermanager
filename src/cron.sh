@@ -19,3 +19,23 @@
 #
 #===================================================================================
 
+. /etc/gsm/config.cfg
+
+
+#-----------------------------------------------------------------------------------
+# where are we? save it.
+#-----------------------------------------------------------------------------------
+STARTPWD=$PWD
+
+#-----------------------------------------------------------------------------------
+# see if repository already exists
+# if so pull changes
+# else clone it
+#-----------------------------------------------------------------------------------
+if ( [ -d "$localrepodir" ] )
+then
+	cd $localrepodir || exit 2 "could not cd to local repo dir"
+	git pull || exit 2 "could not pull updates from repository"
+else
+	mkdir -p $localrepodir && cd $localrepodir && git clone $repository . || exit 2 "could not create new repository"
+fi
